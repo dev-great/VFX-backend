@@ -14,7 +14,6 @@ from pathlib import Path
 import os
 import django_heroku
 import dj_database_url
-from firebase_admin import initialize_app
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -68,15 +67,6 @@ INSTALLED_APPS = [
 SITE_ID = 6
 X_FRAME_OPTIONS = "SAMEORIGIN"
 SILENCED_SYSTEM_CHECKS = ["security.W019"]
-
-FIREBASE_APP = initialize_app()
-
-FCM_DJANGO_SETTINGS = {
-    "APP_VERBOSE_NAME": "[signals]",
-    "ONE_DEVICE_PER_USER": False,
-    "DELETE_INACTIVE_DEVICES": False,
-    "UPDATE_ON_DUPLICATE_REG_ID": True,
-}
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES':[
