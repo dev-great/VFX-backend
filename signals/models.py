@@ -1,5 +1,4 @@
 from django.db import models
-from ckeditor.fields import RichTextField
 from django.contrib.auth.models import User
 # Create your models here.
 
@@ -8,7 +7,7 @@ class Signals(models.Model):
     Buy= models.IntegerField(blank=True, null=True)
     TP= models.IntegerField(blank=True, null=True)
     SL= models.IntegerField(blank=True, null=True)
-    body= RichTextField(max_length=1000,blank=True, null=True)
+    body=models.CharField(max_length=1000,blank=True, null=True)
     video = models.FileField(upload_to='documents/', blank=True, null=True)
     PostImage= models.ImageField(upload_to="signals/feedpost/",blank=True, null=True)
     user= models.ForeignKey(User, on_delete=models.CASCADE)

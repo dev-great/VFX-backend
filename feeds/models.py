@@ -1,9 +1,8 @@
 from django.db import models
-from ckeditor.fields import RichTextField
 # Create your models here.
 
 class FeedPost(models.Model):
-    body= RichTextField(max_length=1000)
+    body=models.CharField(max_length=1000,blank=True, null=True)
     video = models.FileField(upload_to='documents/', blank=True, null=True)
     PostImage= models.ImageField(upload_to="feedpost/",  blank=True, null=True)
     publisheddate= models.DateTimeField(auto_now_add=True)
