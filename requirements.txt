@@ -16,6 +16,7 @@ django-filter==21.1
 django-flat-responsive==2.0
 django-flat-theme==1.1.4
 django-heroku==0.3.1
+dj-rest-auth==2.2.4
 django-nested-admin==3.4.0
 django-rest-knox==4.2.0
 djangorestframework==3.13.1
