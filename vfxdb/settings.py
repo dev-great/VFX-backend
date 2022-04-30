@@ -35,8 +35,6 @@ ALLOWED_HOSTS = ['10.0.2.2','127.0.0.1','192.168.43.196','vfxdb.herokuapp.com']
 # Application definition
 
 INSTALLED_APPS = [
-    'admin_interface',
-    'colorfield',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
