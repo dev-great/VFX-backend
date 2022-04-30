@@ -73,14 +73,6 @@ REST_FRAMEWORK = {
     ]
 }
 
-LANGUAGES = (
-    ("en", ("English")),
-    ("it", ("Italiano")),
-    ("fr", ("Française")),
-    # more than one language is expected here
-)
-LANGUAGE_CODE = "en"
-USE_I18N = True
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
