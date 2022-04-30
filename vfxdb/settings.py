@@ -61,6 +61,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount.providers.twitter',
     'fcm_django',
 
+
 ]
 
 SITE_ID = 6

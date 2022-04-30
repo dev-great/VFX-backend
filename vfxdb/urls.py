@@ -25,7 +25,6 @@ urlpatterns = [
     path('feedback/', include('feedback.urls')),
     path('signals/', include('signals.urls')),
     path('account/', include('accountsetup.urls')),
-    path('auth/', include('rest_auth.urls')),
     path("i18n/", include("django.conf.urls.i18n")),
     path('dj-rest-auth/registration/', include('dj_rest_auth.registration.urls')),
 ]

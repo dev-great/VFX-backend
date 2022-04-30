@@ -1,4 +1,3 @@
-import pyotp
 import base64
 from api.serializer import Paymentserializer, Subscriptionserializer, Profileserializer, OTPserializer, ChangePasswordSerializer
 from .models import *
@@ -16,8 +15,6 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework.response import Response
 from allauth.socialaccount.providers.twitter.views import TwitterOAuthAdapter
-from rest_auth.registration.views import SocialLoginView
-from rest_auth.social_serializers import TwitterLoginSerializer
 from allauth.socialaccount.providers.facebook.views import FacebookOAuth2Adapter
 from allauth.socialaccount.providers.oauth2.client import OAuth2Client
 from dj_rest_auth.registration.views import SocialLoginView
@@ -180,14 +177,6 @@ class RegisterView(APIView):
             return Response({"error": False})
         return Response({"error": True})
 
-
-class FacebookLogin(SocialLoginView):
-    
-    adapter_class = FacebookOAuth2Adapter
-
-class TwitterLogin(SocialLoginView):
-    serializer_class = TwitterLoginSerializer
-    adapter_class = TwitterOAuthAdapter
 
 
 class ChangePasswordView(generics.UpdateAPIView):
